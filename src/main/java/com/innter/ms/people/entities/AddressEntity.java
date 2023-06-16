@@ -23,7 +23,6 @@ public class AddressEntity {
     @Column(name = "fi_id")
     private Long id;
 
-    @NotNull
     @Column(name = "fc_street")
     private String street;
 
@@ -34,15 +33,12 @@ public class AddressEntity {
     @Column(name = "fi_internal_number")
     private int internalNumber;
 
-    @NotNull
     @Column(name = "fc_colony")
     private String colony;
 
-    @NotNull
     @Column(name = "fc_municipality")
     private String municipality;
 
-    @NotNull
     @Column(name = "fc_city")
     private String city;
 
@@ -52,6 +48,6 @@ public class AddressEntity {
 
     @ToString.Exclude
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "fi_person_id",referencedColumnName = "fi_id")
+    @JoinColumn(name = "fi_person_id", referencedColumnName = "fi_id")
     private PersonEntity person;
 }

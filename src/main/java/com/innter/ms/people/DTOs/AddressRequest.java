@@ -17,7 +17,6 @@ import lombok.ToString;
 @NoArgsConstructor
 public class AddressRequest {
 
-    @NotNull
     @NotBlank
     @JsonProperty("street")
     private String street;
@@ -30,17 +29,14 @@ public class AddressRequest {
     @JsonProperty("internal_number")
     private int internalNumber;
 
-    @NotNull
     @NotBlank
     @JsonProperty("colony")
     private String colony;
 
-    @NotNull
     @NotBlank
     @JsonProperty("municipality")
     private String municipality;
 
-    @NotNull
     @NotBlank
     @JsonProperty("city")
     private String city;
